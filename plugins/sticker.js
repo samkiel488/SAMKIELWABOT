@@ -20,7 +20,7 @@ bot(
 			!message.reply_message ||
 			(!message.reply_message.video && !message.reply_message.image)
 		)
-			return await message.send('*Reply to image/video*')
+			return await message.send('* Oga Reply to an image or a video 🙄*')
 		return await message.send(
 			await sticker(
 				'str',
