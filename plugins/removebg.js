@@ -8,7 +8,7 @@ bot(
 		type: 'misc',
 	},
 	async (message, match) => {
-		if (config.RMBG_KEY == 'null')
+		if (config.RMBG_KEY == 'gLZLMmB1UsEsB6P47BSjzmaA')
 			return await message.send(`1. Create a account in remove.bg
     2. Verify your account.
     3. Copy your Key.
