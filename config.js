@@ -1,12 +1,14 @@
-const toBool = (x) => x == 'true'
-const { Sequelize } = require('sequelize')
-const { existsSync } = require('fs')
-const path = require('path')
-const configPath = path.join(__dirname, './config.env')
-const databasePath = path.join(__dirname, './database.db')
-if (existsSync(configPath)) require('dotenv').config({ path: configPath })
-const DATABASE_URL =
-  process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
+const toBool = (x) => x == 'true';
+const { Sequelize } = require('sequelize');
+const { existsSync } = require('fs');
+const path = require('path');
+const configPath = path.join(__dirname, './config.env');
+const databasePath = path.join(__dirname, './database.db');
+
+if (existsSync(configPath)) require('dotenv').config({ path: configPath });
+
+const DATABASE_URL = process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL;
+
 module.exports = {
   VERSION: require('./package.json').version,
   SESSION_ID: (process.env.SESSION_ID || '8_6_5043_0567_23f9').trim(),
@@ -27,8 +29,8 @@ module.exports = {
           },
           logging: false,
         }),
-  HANDLERS: (process.env.PREFIX || 'null').trim(),
-  SUDO: process.env.SUDO || '',
+  HANDLERS: (process.env.PREFIX || '!').trim(), // Set a common command prefix, e.g., "!"
+  SUDO: '', // Leave SUDO empty for public access
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
@@ -59,22 +61,17 @@ module.exports = {
   AJOIN: toBool(process.env.AJOIN),
   GPT: (process.env.GPT || 'free').trim(),
   MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
-  APPROVE: (process.env.APPROVE || '').trim(),
+  APPROVE: '', // Ensure APPROVE is empty for public access
   ANTI_DELETE: (process.env.ANTI_DELETE || 'true').trim(),
   PERSONAL_MESSAGE: process.env.PERSONAL_MESSAGE || 'THANKS FOR CONTACTING SAMKIEL BOT 👨🏽‍💻, I AM HERE TO SERVE YOU WITH WHATEVER YOU WANT JUST USE *MENU* 😊',
-  DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
-    ? toBool(process.env.DISABLE_START_MESSAGE)
-    : false,
+  DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE ? toBool(process.env.DISABLE_START_MESSAGE) : false,
   ANTI_BOT: (process.env.ANTI_BOT || 'off').trim(),
   ANTI_BOT_MESSAGE: process.env.ANTI_BOT_MESSAGE || '&mention removed',
-  WARN_MESSAGE:
-    process.env.WARN_MESSAGE ||
-    '⚠️WARNING⚠️\n*User :* &mention\n*Warn :* &warn\n*Remaining :* &remaining',
-  WARN_RESET_MESSAGE:
-    process.env.WARN_RESET_MESSAGE || `WARN RESET\nUser : &mention\nRemaining : &remaining`,
+  WARN_MESSAGE: process.env.WARN_MESSAGE || '⚠️WARNING⚠️\n*User :* &mention\n*Warn :* &warn\n*Remaining :* &remaining',
+  WARN_RESET_MESSAGE: process.env.WARN_RESET_MESSAGE || `WARN RESET\nUser : &mention\nRemaining : &remaining`,
   WARN_KICK_MESSAGE: process.env.WARN_KICK_MESSAGE || '&mention kicked',
   TRUECALLER: process.env.TRUECALLER,
   DELETE_TYPE: (process.env.DELETE_TYPE || '').trim(),
   LIST_TYPE: (process.env.LIST_TYPE || 'poll').trim(),
   BING_COOKIE: (process.env.BING_COOKIE || '').trim(),
-}
+};
