@@ -84,5 +84,4 @@ A simple WhatsApp User bot.
 
 ### Thanks To
 
-- [Yusuf Usta](https://github.com/Quiec) for [WhatsAsena](https://github.com/yusufusta/WhatsAsena)
-- [@adiwajshing](https://github.com/adiwajshing) for [Baileys](https://github.com/adiwajshing/Baileys)
+- [EZEKIEL SAMUEL](https://wa.me/+2348087357158) for everything.![IMG_7461](https://github.com/samkiel488/SAMKIELWABOT/assets/142183985/be581d6b-e864-455e-8759-992cdbb66ea5)
