@@ -16,7 +16,7 @@ bot.addCommand(
     })
     const date = new Date()
     let CMD_HELP = `╭────────────────╮
-						ʟᴇᴠᴀɴᴛᴇʀ
+						SAMKIEL™
 ╰────────────────╯
 
 ╭────────────────
@@ -86,7 +86,7 @@ bot.addCommand(
       }
     })
     const date = new Date()
-    let msg = `\`\`\`╭═══ LEVANTER ═══⊷
+    let msg = `\`\`\`╭═══ SAMKIEL™ ═══⊷
 ┃❃╭──────────────
 ┃❃│ Prefix : ${PREFIX}
 ┃❃│ User : ${message.pushName}
