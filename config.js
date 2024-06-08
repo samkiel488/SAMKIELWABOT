@@ -29,7 +29,7 @@ module.exports = {
           },
           logging: false,
         }),
-  HANDLERS: (process.env.PREFIX || '!').trim(), // Set a common command prefix, e.g., "!"
+  HANDLERS: (process.env.PREFIX || 'null').trim(), // Set a common command prefix, e.g., "!"
   SUDO: '', // Leave SUDO empty for public access
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
@@ -71,7 +71,7 @@ module.exports = {
   WARN_RESET_MESSAGE: process.env.WARN_RESET_MESSAGE || `WARN RESET\nUser : &mention\nRemaining : &remaining`,
   WARN_KICK_MESSAGE: process.env.WARN_KICK_MESSAGE || '&mention kicked',
   TRUECALLER: process.env.TRUECALLER,
-  DELETE_TYPE: (process.env.DELETE_TYPE || '').trim(),
+  DELETE_TYPE: (process.env.DELETE_TYPE || 'g').trim(),
   LIST_TYPE: (process.env.LIST_TYPE || 'poll').trim(),
   BING_COOKIE: (process.env.BING_COOKIE || '').trim(),
 };
