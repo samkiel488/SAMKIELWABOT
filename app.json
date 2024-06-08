@@ -1,28 +1,28 @@
 {
-  "name": "levanter@5.2.3",
-  "description": "",
+  "name": "SAMKIEL BOT 👨🏽‍💻",
+  "description": " A COMPLEX WHATSAPP BOT MADE BY SAMKIEL",
   "keywords": ["noedjs"],
   "success_url": "/",
   "env": {
     "ALWAYS_ONLINE": {
-      "description": "show bot number last seen as online",
-      "required": false,
-      "value": "false"
+      "description": "show bot number last seen as typing...",
+      "required": true,
+      "value": "true"
     },
     "LOG_MSG": {
       "description": "Show whatsapp msgs in log",
-      "required": false,
-      "value": "false"
+      "required": true,
+      "value": "true"
     },
     "SUDO": {
       "description": "admin",
       "required": false,
-      "value": ""
+      "value": "false"
     },
     "PREFIX": {
       "description": "prefix, check for more",
       "required": false,
-      "value": "."
+      "value": "null"
     },
     "SESSION_ID": {
       "description": "session id",
@@ -32,7 +32,7 @@
     "STICKER_PACKNAME": {
       "description": "sticker pack info",
       "required": false,
-      "value": "❤️,LyFE"
+      "value": "SAMKIELBOT 👨🏽‍💻"
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered.",
@@ -44,17 +44,17 @@
     },
     "RMBG_KEY": {
       "description": "API key from remove.bg, required for plugin rmbg",
-      "required": false,
-      "value": "null"
+      "required": true,
+      "value": "gLZLMmB1UsEsB6P47BSjzmaA"
     },
     "LANGUAG": {
       "description": "Default Language for tts or trt",
-      "required": false,
+      "required": true,
       "value": "en"
     },
     "WARN_LIMIT": {
       "description": "Maximum number of wanings to a person.",
-      "required": false,
+      "required": true,
       "value": "3"
     },
     "FORCE_LOGOUT": {
@@ -70,12 +70,12 @@
     "ANTILINK_MSG": {
       "description": "Message send when antilink and action is kick.",
       "required": false,
-      "value": "_Antilink Detected &mention kicked_"
+      "value": "_Antilink Detected &mention why na? Oya i don  kick you comot_"
     },
     "ANTISPAM_MSG": {
       "description": "Message send when antispam.",
       "required": false,
-      "value": "_Antispam Detected &mention kicked_"
+      "value": "_Antispam Detected &mention k why you dey spam me na? oya comot_"
     },
     "ANTIWORDS_MSG": {
       "description": "Message send when antiword.",
@@ -99,8 +99,8 @@
     },
     "AUTO_STATUS_VIEW": {
       "description": "view others status",
-      "required": false,
-      "value": "false"
+      "required": true,
+      "value": "truee"
     },
     "SEND_READ": {
       "description": "send blue tick",
@@ -120,7 +120,7 @@
     "DISABLE_START_MESSAGE": {
       "description": "Disable start Message",
       "required": false,
-      "value": "false"
+      "value": "true"
     }
   },
   "addons": [
